@@ -1,13 +1,13 @@
 import React from 'react';
-import Navbar from './Navbar';
 import Carousel from './Carousel';
 import TrainingPrograms from './TrainingPrograms';
 import Testimonials from './Testimonials';
+import AfterCarousel from './AfterCarousel';
 const Joined = () => {
   return (
     <div>
-      <Navbar />
       <Carousel />
+      <AfterCarousel />
       <TrainingPrograms />
       <Testimonials />
     </div>
