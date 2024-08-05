@@ -11,7 +11,7 @@ const items= [
 
     },
     {
-        id:1,
+        id:2,
         image:training,
         heading: "Qualified Mentor",
         content:"Well Trained mentors to boost your knowledge about  domains"
@@ -33,19 +33,19 @@ const items= [
 
 function AfterCarousel() {
   return (
-    <div className='h-72   bg-[#17212E]'>
-        <div className=' flex justify-evenly flex-wrap'>
+    <div className='h-80   bg-[#17212E]'>
+        <div className=' flex md:justify-evenly overflow-scroll overflow-y-hidden'>
         {
             items.map((item)=>{
                 return(
-                 <div key={item.id} className='text-white w-56 h-72 '>
+                 <div key={item.id} className='text-white mx-10 w-56 h-80 flex flex-wrap justify-evenly'>
                      
                   <div className=''>
-                     <div className=' bg-[#F5CF6B] ml-14 my-5 size-28 flex justify-center rounded-full'>
+                     <div className=' bg-[#F5CF6B]  md:ml-14 my-5 md:mt-10 size-28  flex justify-center rounded-full'>
                         <img className='bg-center  bg-cover size-16 mt-6 ' src={item.image} alt="image" />
                     </div>
                     <h1 className='text-lg  text-center'>{item.heading}</h1>
-                    <p className='text-center text-sm mt-3'>{item.content}</p>
+                    <p className='text-center  text-sm mt-3'>{item.content}</p>
                      </div>
                   </div>
                 //  <div className='text-white bg-[#F5CF6B] my-5 size-28  rounded-full'>

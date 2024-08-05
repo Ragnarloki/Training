@@ -3,6 +3,7 @@ import Carousel from './Carousel';
 import TrainingPrograms from './TrainingPrograms';
 import Testimonials from './Testimonials';
 import AfterCarousel from './AfterCarousel';
+
 const Joined = () => {
   return (
     <div>

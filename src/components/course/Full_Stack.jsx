@@ -1,9 +1,259 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Mentor from './Mentor'
+import MaskGroup from "../../assets/images/Mask group.png"
+import checkList from "../../assets/images/check_list.png"
+import Notes from './Notes'
+import Chat_bot from './Chat_bot'
+import AskMentor from './AskMentor'
+import { FaLock } from "react-icons/fa6";
+const VideoCard = () => {
+  return (
+    <div className=" flex justify-center m-5 md:m-10">
+      <div className="bg-gray-800 rounded-3xl  w-full overflow-hidden relative  h-52 md:h-96">
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="bg-yellow-500 w-12 h-12 rounded-full flex items-center justify-center cursor-pointer">
+            <svg
+              className="w-6 h-6 text-gray-800"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fillRule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zm-2-8.707v3.414a1 1 0 001.707.707l2.293-2.293a1 1 0 000-1.414L9.707 8.293a1 1 0 00-1.707.707v3.414z"
+                clipRule="evenodd"
+              />
+            </svg>
+          </div>
+        </div>
+        <div className="absolute bottom-4 left-4 text-white">
+          <p className="text-lg font-semibold">Full Stack Development</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+
+const DiscussionForum = () => {
+  return (
+    <div className='flex justify-center'>
+    <div className="bg-white p-6  rounded-lg shadow-md w-[95%]">
+      <h2 className="text-xl font-semibold mb-4">Discussion Forum</h2>
+      <textarea className="w-full bg-gray-100 p-2 mb-4 border rounded-md" placeholder="Your Query" rows="7"></textarea>
+      <button className="px-4 py-2 bg-gray-800 text-white rounded-md mb-4">Submit</button>
+      
+      <h1 className='text-2xl font-semibold flex justify-center'>Commands</h1>
+            
+      <div className="space-y-4">
+        <div className="flex items-start">
+          <div className="bg-gray-800 text-white w-10 h-10 rounded-full flex items-center justify-center mr-4">
+            R
+          </div>
+          
+          <div className="flex-1">
+            <p className="font-semibold">rohan123</p>
+            <input  className="bg-gray-100 w-[80%] p-2 border rounded-md" type='text'/>
+          </div>
+        </div>
+        <div className="flex items-start">
+          <div className="bg-gray-800 text-white w-10 h-10 rounded-full flex items-center justify-center mr-4">
+            Y
+          </div>
+          <div className="flex-1 mb-2">
+            <p className="font-semibold">You</p>
+            <input className="bg-gray-100 w-[80%] p-2 border rounded-md " type='text' />
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  );
+};
+
+const Introduction = () => {
+  return(
+    <div className='absolute  bg-[#F1F1F1] w-[230px] overflow-hidden  h-[400px] md:size-[400px]'>
+       <h1 className='text-xl m-3'>Introduction</h1>
+       <hr className='bg-black'/>
+       <p className='my-3 ml-5 flex'>what you  will learn <FaLock className='my-1 mx-3'/></p>
+       <hr className='bg-black'/>
+       <p className='my-3 ml-5 flex'>what you  will learn <FaLock className='my-1 mx-3'/></p>
+       <hr className='bg-black'/><p className='my-3 ml-5 flex'>what you  will learn <FaLock className='my-1 mx-3'/></p>
+       <hr className='bg-black'/><p className='my-3 ml-5 flex'>what you  will learn <FaLock className='my-1 mx-3'/></p>
+       <hr className='bg-black'/><p className='my-3 flex ml-5'>what you  will learn <FaLock className='my-1 mx-3'/></p>
+       <hr className='bg-black'/><p className='my-3 flex ml-5'>what you  will learn <FaLock className='my-1 mx-3'/></p>
+       <hr className='bg-black'/><p className='my-3 flex ml-5'>what you  will learn <FaLock className='my-1 mx-3'/></p>
+       <hr className='bg-black'/>
+       <p className='my-3 flex ml-5'>what you  will learn <FaLock className='my-1 mx-3'/></p>
+       <hr className='bg-black'/><p className='my-3 flex ml-5'>what you  will learn <FaLock className='my-1 mx-3'/></p>
+       <hr className='bg-black'/><p className='my-3 flex ml-5'>what you  will learn <FaLock className='my-1 mx-3'/></p>
+       <hr className='bg-black'/>
+  </div>
+  )
+}
+
+const TableOfContents = () => {
+    
+   const [Drop,setDrop]= useState(false);
+  
+   const handleDropdown =() =>{
+    setDrop(prevValue => !prevValue)
+}
+  
+
+  return (
+    <div className='flex justify-center'>
+    <div className="bg-white p-6 rounded-lg shadow-md w-[95%] ">
+      <h2 className="text-xl font-semibold mb-4">Table Of Contents</h2>
+      <ul className="space-y-2 mb-2">
+          <li  className="border rounded-md p-4">
+            <div className="flex justify-between items-center">
+              <span>Introduction to Full Stack Development</span>
+              <button onClick={handleDropdown} >&#9662;</button>
+            </div>
+            {Drop && 
+           <Introduction /> }
+            <div className="text-gray-600 text-sm mt-2">
+              <p>10 Modules</p>
+              <p>2 Assignments</p>
+            </div>
+          </li>
+        {/* ))} */}
+      </ul>
+
+     
+
+      <ul className="space-y-2 mb-2">
+          <li  className="border rounded-md p-4">
+            <div className="flex justify-between items-center">
+              <span>Frontend Development</span>
+              <button onClick={handleDropdown} >&#9662;</button>
+            </div>
+            <div className="text-gray-600 text-sm mt-2">
+              <p>10 Modules</p>
+              <p>2 Assignments</p>
+            </div>
+          </li>
+      </ul>
+
+      <ul className="space-y-2 mb-2">
+          <li  className="border rounded-md p-4">
+            <div className="flex justify-between items-center">
+              <span>Backend Development</span>
+              <button onClick={handleDropdown} >&#9662;</button>
+            </div>
+            <div className="text-gray-600 text-sm mt-2">
+              <p>10 Modules</p>
+              <p>2 Assignments</p>
+            </div>
+          </li>
+        {/* ))} */}
+      </ul>
+
+      <ul className="space-y-2 ">
+        {/* {['Introduction to Full Stack Development', 'Front End Development', 'Back End Development', 'Database'].map((item, index) => ( */}
+          <li  className="border rounded-md p-4">
+            <div className="flex justify-between items-center">
+              <span>Database</span>
+              <button onClick={handleDropdown} >&#9662;</button>
+            </div>
+            <div className="text-gray-600 text-sm mt-2">
+              <p>10 Modules</p>
+              <p>2 Assignments</p>
+            </div>
+          </li>
+        {/* ))} */}
+      </ul>
+    </div>
+    </div>
+  );
+};
+
+
+
 
 function Full_Stack() {
+
+  const [showDiscussion, setDiscussion] = useState(true);
+
+  const handleDiscussion = () => {
+    setIsClicked(!isClicked);
+    setDiscussion(true);
+    setChat_bot(false)
+    setNotes(false)
+    setAskMentor(false)
+   };
+
+  
+   const [showNotes, setNotes] = useState(false);
+
+   const handleNotes = () => {
+     setNotes(true);
+     setDiscussion(false);
+     setChat_bot(false)
+     setAskMentor(false)
+    };
+
+    const [showChat_bot, setChat_bot] = useState(false);
+
+    const handleChat_bot = () => {
+      setNotes(false);
+      setDiscussion(false);
+      setChat_bot(true)
+      setAskMentor(false)
+      };
+  
+  
+     const [showAskMentor, setAskMentor] = useState(false);
+
+     const handleAskMentor = () => {
+      setNotes(false);
+      setDiscussion(false);
+      setChat_bot(false)
+      setAskMentor(true)
+     
+      };
+   
+      const [isClicked, setIsClicked] = useState(false);
+
+     
   return (
-    <div>
-        <input type="button" value={`<`} />
+    <div className=''>
+    <div className='bg-[#FFFBEF] '>
+      <div className=' flex '>
+       <input type="button" className='m-5 -mr-0' value={`<`} />
+       <h1  className='m-5 font-semibold'>Full Stack Development</h1>
+      </div>
+        <VideoCard />
+        <div className='flex justify-evenly mx-2  md:mx-40 text-nowrap overflow-scroll md:overflow-hidden text-xl font-semibold'>
+          <button onClick={handleDiscussion}  className='hover:border-b-4 mx-3 mb-5 border-[#F5CF6B]'>Discussion</button>
+          <button onClick={handleNotes} className='hover:border-b-4 mb-5 mx-3 border-[#F5CF6B]'>Notes</button>
+          <button onClick={handleChat_bot} className='hover:border-b-4 mb-5 mx-3 border-[#F5CF6B]'>Chat Bot</button>
+          <button onClick={handleAskMentor} className='hover:border-b-4 mb-5 mx-3 border-[#F5CF6B]'>Ask Mentor</button>
+        </div>
+
+        <div className='grid grid-cols-1 md:grid-cols-2'>
+       <div className='mb-5 '>
+       {showDiscussion &&  
+       <DiscussionForum className="mb-10"/>
+       }
+       {showNotes &&
+       <Notes className="mb-10"/>}
+       
+       {showChat_bot &&
+       <Chat_bot className="mb-10"/>}
+       {showAskMentor &&
+       <AskMentor className="mb-10"/>}
+
+       </div>
+       <div className=''>
+        <TableOfContents />
+       </div>
+       
+        </div>
+    </div>
+      <Mentor />
     </div>
   )
 }

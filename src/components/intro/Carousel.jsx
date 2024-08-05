@@ -57,14 +57,14 @@ const FullScreenCarousel = () => {
     <div >
       <Slider {...settings}>
 
-        <div className="h-[450px] bg-[#D9D9D9] flex  justify-center">
-          <h2 className="text-black text-3xl">Slide 1</h2>
+        <div className="h-[450px] bg-[#D9D9D9] ">
+          <h2 className="text-black text-3xl flex  justify-center items-center  h-[450px]">Slide 1</h2>
         </div>
-        <div className="h-[450px] bg-[#D9D9D9] flex  justify-center">
-          <h2 className="text-black text-3xl">Slide 2</h2>
+        <div className="h-[450px] bg-[#D9D9D9] ">
+          <h2 className="text-black text-3xl flex  justify-center items-center  h-[450px]">Slide 2</h2>
         </div>
-        <div className="h-[450px] bg-[#D9D9D9] flex  justify-center">
-          <h2 className="text-black text-3xl">Slide 3</h2>
+        <div className="h-[450px] bg-[#D9D9D9]">
+          <h2 className="text-black text-3xl flex  justify-center items-center  h-[450px]">Slide 3</h2>
         </div>
       </Slider>
     </div>
