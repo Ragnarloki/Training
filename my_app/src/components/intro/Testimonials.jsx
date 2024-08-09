@@ -118,7 +118,7 @@ const Testimonials = () => {
       <div className="w-[1050px] overflow-hidden hidden md:block ">
         <Slider {...settings}>
           {testimonials.map((testimonial) => (
-            <div key={testimonial.id} className="mt-10 border-8 hover:scale-110 border-[#17212E] w-40 flex justify-center rounded-2xl bg-white    items-center">
+            <div key={testimonial.id} className="mt-12 border-8 hover:scale-105 border-[#17212E] w-40 flex justify-center rounded-2xl bg-white    items-center">
               <div className='flex justify-center h-96 w-80 '>
               <img src={testimonial.image} className='rounded-full  -mt-10 z-10   size-48' alt="" />
             

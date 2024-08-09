@@ -3,9 +3,7 @@ import React from 'react';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import App from "../../assets/images/App1.jpeg"
-import Web from "../../assets/images/Web1.jpg"
-import Ai from "../../assets/images/Aiml.jpg"
+import Class from "../../assets/images/children_class.jpg"
 
 const NextArrow = (props) => {
   const { className, style, onClick } = props;
@@ -56,22 +54,25 @@ const FullScreenCarousel = () => {
     ),
   };
 
+  const Image =[{
+    id:1,
+    URL:Class,
+  },]
+
   return (
     <div >
-      <Slider {...settings}>
-     
-        <div className="h-[400px] md:h-[550px]">
-        <img src={Web} className='h-full w-full' alt="" />
+      {/* if you add more content in the json then uncommand the slider tag to set us an slide */}
+      {/* <Slider {...settings}> */}
+         {
+          Image.map((image)=>(
+             
+        <div key={image.id} className="h-[300px] md:h-[550px]">
+        <img src={image.URL} className='h-full w-full' alt="" />
         </div>
+          ))
+         }
 
-        <div className="h-[400px] md:h-[550px] ">
-          <img src={App} className='h-full w-full' alt="" />
-        </div>
-       
-        <div className="h-[400px] md:h-[550px]">
-        <img src={Ai} className='h-full w-full bg-cover' alt="" />
-        </div>
-      </Slider>
+      {/* </Slider> */}
     </div>
   );
 };

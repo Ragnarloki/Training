@@ -43,13 +43,13 @@ const DiscussionForum = () => {
     <div className="bg-white p-6  rounded-lg shadow-md w-[95%]">
       <h2 className="text-xl font-semibold mb-4">Discussion Forum</h2>
       <textarea className="w-full bg-gray-100 p-2 mb-4 border rounded-md" placeholder="Your Query" rows="7"></textarea>
-      <button className="px-4 py-2 bg-gray-800 text-white rounded-md mb-4">Submit</button>
+      <button className="px-4 py-2 bg-[#17212E] text-white rounded-md mb-4">Submit</button>
       
       <h1 className='text-2xl font-semibold flex justify-center'>Commands</h1>
             
       <div className="space-y-4">
         <div className="flex items-start">
-          <div className="bg-gray-800 text-white w-10 h-10 rounded-full flex items-center justify-center mr-4">
+          <div className="bg-[#17212E] text-white w-10 h-10 rounded-full flex items-center justify-center mr-4">
             R
           </div>
           
@@ -59,7 +59,7 @@ const DiscussionForum = () => {
           </div>
         </div>
         <div className="flex items-start">
-          <div className="bg-gray-800 text-white w-10 h-10 rounded-full flex items-center justify-center mr-4">
+          <div className="bg-[#17212E] text-white w-10 h-10 rounded-full flex items-center justify-center mr-4">
             Y
           </div>
           <div className="flex-1 mb-2">
@@ -74,23 +74,180 @@ const DiscussionForum = () => {
 };
 
 const Introduction = () => {
+
+  const instruction =[{
+    id:1,
+    topic:"what you will learn"
+  },{
+    id:2,
+    topic:"what you will learn"
+  },{
+    id:3,
+    topic:"what you will learn"
+  },{
+    id:4,
+    topic:"what you will learn"
+  },{
+    id:5,
+    topic:"what you will learn"
+  },{
+    id:6,
+    topic:"what you will learn"
+  },{
+    id:7,
+    topic:"what you will learn"
+  },]
   return(
-    <div className='absolute  bg-[#F1F1F1] w-[230px] overflow-hidden  h-[400px] md:size-[400px]'>
+    <div className='absolute  bg-[#F1F1F1] w-[230px] overflow-scroll  h-[400px] md:size-[400px]'>
        <h1 className='text-xl m-3'>Introduction</h1>
        <hr className='bg-black'/>
-       <p className='my-3 ml-5 flex'>what you  will learn <FaLock className='my-1 mx-3'/></p>
+              <p className='my-3 ml-5 flex'>what will you learn <FaLock className='my-1 mx-3'/></p>
+            
+        <div>
+         { instruction.map((title)=>(
+            <div key={title.id}>
+              <hr className='bg-black'/>
+              <p className='my-3 ml-5 flex'>{title.topic} <FaLock className='my-1 mx-3'/></p>
+            
+            </div>
+            
+         ))
+        }
+       </div>
+  </div>
+  )
+}
+
+const Introduction2 = () => {
+
+  const instruction =[{
+    id:1,
+    topic:"what you will learn"
+  },{
+    id:2,
+    topic:"what you will learn"
+  },{
+    id:3,
+    topic:"what you will learn"
+  },{
+    id:4,
+    topic:"what you will learn"
+  },{
+    id:5,
+    topic:"what you will learn"
+  },{
+    id:6,
+    topic:"what you will learn"
+  },{
+    id:7,
+    topic:"what you will learn"
+  },]
+  return(
+    <div className='absolute  bg-[#F1F1F1] w-[230px] overflow-scroll  h-[400px] md:size-[400px]'>
+       <h1 className='text-xl m-3'>Introduction</h1>
        <hr className='bg-black'/>
-       <p className='my-3 ml-5 flex'>what you  will learn <FaLock className='my-1 mx-3'/></p>
-       <hr className='bg-black'/><p className='my-3 ml-5 flex'>what you  will learn <FaLock className='my-1 mx-3'/></p>
-       <hr className='bg-black'/><p className='my-3 ml-5 flex'>what you  will learn <FaLock className='my-1 mx-3'/></p>
-       <hr className='bg-black'/><p className='my-3 flex ml-5'>what you  will learn <FaLock className='my-1 mx-3'/></p>
-       <hr className='bg-black'/><p className='my-3 flex ml-5'>what you  will learn <FaLock className='my-1 mx-3'/></p>
-       <hr className='bg-black'/><p className='my-3 flex ml-5'>what you  will learn <FaLock className='my-1 mx-3'/></p>
+              <p className='my-3 ml-5 flex'>what will you learn <FaLock className='my-1 mx-3'/></p>
+            
+        <div>
+         { instruction.map((title)=>(
+            <div key={title.id}>
+              <hr className='bg-black'/>
+              <p className='my-3 ml-5 flex'>{title.topic} <FaLock className='my-1 mx-3'/></p>
+            
+            </div>
+            
+         ))
+        }
+       </div>
+  </div>
+  )
+}
+
+const Introduction3 = () => {
+
+  const instruction =[{
+    id:1,
+    topic:"what you will learn"
+  },{
+    id:2,
+    topic:"what you will learn"
+  },{
+    id:3,
+    topic:"what you will learn"
+  },{
+    id:4,
+    topic:"what you will learn"
+  },{
+    id:5,
+    topic:"what you will learn"
+  },{
+    id:6,
+    topic:"what you will learn"
+  },{
+    id:7,
+    topic:"what you will learn"
+  },]
+  return(
+    <div className='absolute  bg-[#F1F1F1] w-[230px] overflow-scroll  h-[400px] md:size-[400px]'>
+       <h1 className='text-xl m-3'>Introduction</h1>
        <hr className='bg-black'/>
-       <p className='my-3 flex ml-5'>what you  will learn <FaLock className='my-1 mx-3'/></p>
-       <hr className='bg-black'/><p className='my-3 flex ml-5'>what you  will learn <FaLock className='my-1 mx-3'/></p>
-       <hr className='bg-black'/><p className='my-3 flex ml-5'>what you  will learn <FaLock className='my-1 mx-3'/></p>
-       <hr className='bg-black'/>
+              <p className='my-3 ml-5 flex'>what will you learn <FaLock className='my-1 mx-3'/></p>
+            
+        <div>
+         { instruction.map((title)=>(
+            <div key={title.id}>
+              <hr className='bg-black'/>
+              <p className='my-3 ml-5 flex'>{title.topic} <FaLock className='my-1 mx-3'/></p>
+            
+            </div>
+            
+         ))
+        }
+       </div>
+  </div>
+  )
+}
+const Introduction4 = () => {
+
+  const instruction =[{
+    id:1,
+    topic:"what you will learn"
+  },{
+    id:2,
+    topic:"what you will learn"
+  },{
+    id:3,
+    topic:"what you will learn"
+  },{
+    id:4,
+    topic:"what you will learn"
+  },{
+    id:5,
+    topic:"what you will learn"
+  },{
+    id:6,
+    topic:"what you will learn"
+  },{
+    id:7,
+    topic:"what you will learn"
+  },]
+  return(
+    <div className='absolute  bg-[#F1F1F1] w-[230px] overflow-scroll overflow-x-hidden  h-[400px] md:size-[400px]'>
+       <h1 className='text-xl m-3'>Introduction</h1>
+       <hr className='bg-[#17212E]'/>
+              <p className='my-3 ml-5 flex'>what will you learn <FaLock className='my-1 mx-3'/></p>
+            
+        <div>
+         { instruction.map((title)=>(
+            <div key={title.id}>
+              <hr className='bg-[#17212E]'/>
+              <p className='my-3 ml-5 flex'>{title.topic} <FaLock className='my-1 mx-3'/></p>
+            
+            </div>
+            
+         ))
+        }
+       </div>
   </div>
   )
 }
@@ -101,8 +258,35 @@ const TableOfContents = () => {
   
    const handleDropdown =() =>{
     setDrop(prevValue => !prevValue)
-}
+    setDrop1(false);
+    setDrop2(false);
+    setDrop3(false);
+   }
+   
+   const [Drop1,setDrop1]= useState(false);
   
+   const handleDropdown1 =() =>{
+   setDrop1(prevValue => !prevValue)
+    setDrop(false);
+    setDrop2(false);
+    setDrop3(false);
+   }
+   
+  const [Drop2,setDrop2]= useState(false);
+  
+   const handleDropdown2 =() =>{
+   setDrop2(prevValue => !prevValue)
+   setDrop1(false);
+    setDrop(false);
+    setDrop3(false);}
+
+   const [Drop3,setDrop3]= useState(false);
+  
+   const handleDropdown3 =() =>{
+    setDrop3(prevValue => !prevValue)
+    setDrop1(false);
+    setDrop2(false);
+    setDrop(false);}
 
   return (
     <div className='flex justify-center'>
@@ -112,10 +296,17 @@ const TableOfContents = () => {
           <li  className="border rounded-md p-4">
             <div className="flex justify-between items-center">
               <span>Introduction to Full Stack Development</span>
-              <button onClick={handleDropdown} >&#9662;</button>
+              {Drop ? <button onClick={handleDropdown} > &#9652;</button>: <button onClick={handleDropdown} >&#9662;</button>}
             </div>
             {Drop && 
            <Introduction /> }
+            {Drop1 && 
+           <Introduction2 /> }
+            {Drop2 && 
+           <Introduction3 /> }
+            {Drop3 && 
+           <Introduction4 /> }
+           
             <div className="text-gray-600 text-sm mt-2">
               <p>10 Modules</p>
               <p>2 Assignments</p>
@@ -130,7 +321,7 @@ const TableOfContents = () => {
           <li  className="border rounded-md p-4">
             <div className="flex justify-between items-center">
               <span>Frontend Development</span>
-              <button onClick={handleDropdown} >&#9662;</button>
+              {Drop1 ? <button onClick={handleDropdown1} > &#9652;</button>: <button onClick={handleDropdown1} >&#9662;</button>}
             </div>
             <div className="text-gray-600 text-sm mt-2">
               <p>10 Modules</p>
@@ -143,7 +334,7 @@ const TableOfContents = () => {
           <li  className="border rounded-md p-4">
             <div className="flex justify-between items-center">
               <span>Backend Development</span>
-              <button onClick={handleDropdown} >&#9662;</button>
+              {Drop2 ? <button onClick={handleDropdown2} > &#9652;</button>: <button onClick={handleDropdown2} >&#9662;</button>}
             </div>
             <div className="text-gray-600 text-sm mt-2">
               <p>10 Modules</p>
@@ -158,7 +349,7 @@ const TableOfContents = () => {
           <li  className="border rounded-md p-4">
             <div className="flex justify-between items-center">
               <span>Database</span>
-              <button onClick={handleDropdown} >&#9662;</button>
+              {Drop3 ? <button onClick={handleDropdown3} > &#9652;</button>: <button onClick={handleDropdown3} >&#9662;</button>}
             </div>
             <div className="text-gray-600 text-sm mt-2">
               <p>10 Modules</p>
@@ -223,8 +414,8 @@ function Full_Stack() {
   return (
     <div className=''>
     <div className='bg-[#FFFBEF] '>
-      <div className=' flex '>
-       <input type="button" className='m-5 -mr-0' value={`<`} />
+      <div className=' flex text-2xl '>
+       <Link to={"/skill_center/full_stack/"}><input type="button" className='m-5 cursor-pointer -mr-0' value={`<`} /></Link>
        <h1  className='m-5 font-semibold'>Full Stack Development</h1>
       </div>
         <VideoCard />
@@ -238,7 +429,7 @@ function Full_Stack() {
         <div className=''>
           <div className='hidden md:block absolute h-full w-20'>
             <img src={MaskGroup}  className='size-14  m-3 mb-10' alt="" />
-            <Link to={"/Assignment/"}><img src={checkList}  className='size-14 mx-4 mb-5' alt="" /></Link> 
+            <Link to={"/skill_center/Assignment/"}><img src={checkList}  className='size-14 mx-4 mb-5' alt="" /></Link> 
           </div>
            <div>
            <div className='grid grid-cols-1 md:grid-cols-2 mt-5 '>
@@ -263,7 +454,13 @@ function Full_Stack() {
 
            </div>
         </div>
+
             </div>
+            <div className=' md:hidden flex justify-evenly bg-[#FFFBEF]  h-full w-full'>
+            <img src={MaskGroup}  className='size-14  m-3 mb-10' alt="" />
+            <Link to={"/skill_center/Assignment/"}><img src={checkList}  className='size-14 mt-1 mx-4 mb-5' alt="" /></Link> 
+          </div>
+          
       <Mentor className=""/>
     </div>
   )
