@@ -105,14 +105,6 @@ const Assignment = () => {
       
       
     <div>
-        <div className=' flex text-3xl text-white'>
-       <Link to={"/skill_center/full_stack_development/"}><input type="button" className='m-5 -mr-0 hover:cursor-pointer' value={`<`} /></Link>
-       <h1  className='m-5  font-semibold'>Assignment</h1>
-      </div>
-      <div className='hidden md:block mt-[50%] absolute h-full  w-20'>
-            <img src={MaskGroup}  className='size-14 flex justify-center m-3 mb-10' alt="" />
-            <Link to={"/skill_center/Assignment/"}><img src={checkList}  className=' size-14 mx-4 mb-5' alt="" /></Link> 
-      </div>
       <section className=" text-bg-[#17212E] pb-12 md:py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-center text-3xl font-bold mb-8"></h2>

@@ -8,6 +8,7 @@ import Question from './components/Question/Question';
 import "./index.css"
 import Header from './components/Header/Header';
 import CodeEditor from './components/Question/CodeEditor'
+import RegisterForm from './components/RegisterForm';
 function App() {
   
   return (
