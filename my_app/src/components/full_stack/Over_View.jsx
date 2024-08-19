@@ -112,14 +112,13 @@ const RegisterForm = () => {
   };
 
   return (
-    <div className={`inset-0 bg-cover bg-center ${showForm ? 'fixed' : ''}`}>
-      {showForm && (
+ 
         <div>
           <div className="flex justify-center align-middle mx-3 md:-m-0 items-center min-h-screen">
             <div className="bg-white p-6 md:p-8 rounded-2xl w-full max-w-md border border-2 border-[#F5CF6B]">
               <div className="flex justify-between items-center mb-6">
                 <h2 className="text-2xl font-bold text-center">Register Now!</h2>
-                <button onClick={handleClose} className="text-gray-500">✕</button>
+                <button onClick={handle} className="text-gray-500">✕</button>
               </div>
               <form className="space-y-4" onSubmit={handleSubmit}>
                 <div>
@@ -199,8 +198,7 @@ const RegisterForm = () => {
             </div>
           </div>
         </div>
-      )}
-    </div>
+    
   );
 };
 
@@ -309,9 +307,12 @@ const SyllabusSchedule = () => {
 
 
 {/* RegisterForm */}
-     <RegisterForm />        
-      {/* SyllabusSchedule */}
-      <div className={` inset-0 bg-cover bg-center ${Syllabus ? 'fixed' : ''}`} >
+<div className={`inset-0 bg-cover bg-center ${showForm ? 'fixed' : ''}`}>
+{showForm && 
+     <RegisterForm />       
+    }
+    </div>
+          <div className={` inset-0 bg-cover bg-center ${Syllabus ? 'fixed' : ''}`} >
       {Syllabus && 
       <SyllabusSchedule />
       }
