@@ -7,6 +7,7 @@ import Chat_bot from './Chat_bot'
 import AskMentor from './AskMentor'
 import { FaLock } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
+import axios from 'axios'; // Ensure axios is installed via `npm install axios`
 
 const VideoCard = () => {
   return (
@@ -38,40 +39,107 @@ const VideoCard = () => {
 
 
 const DiscussionForum = () => {
+  // State to manage the form inputs
+  const [query, setQuery] = useState('');
+  const [rohanResponse, setRohanResponse] = useState('');
+  const [youResponse, setYouResponse] = useState('');
+
+  // State to manage submission status and errors
+  const [formSubmitted, setFormSubmitted] = useState(false);
+
+  // Function to handle form submission
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // Prepare JSON data
+    const requestData = {
+      query,
+      rohanResponse,
+      youResponse,
+    };
+
+    // Log JSON data to console (for debugging purposes)
+    console.log('Submitting JSON data:', JSON.stringify(requestData, null, 2));
+
+  //   try {
+  //     // Replace with your backend URL
+  //     await axios.post(
+  //       'https://your-backend-url.com/api/submit',
+  //       JSON.stringify(requestData),
+  //       {
+  //         headers: {
+  //           'Content-Type': 'application/json',
+  //         },
+  //       }
+  //     );
+  //     setFormSubmitted(true);
+  //     // Clear fields after successful submission
+  //     setQuery('');
+  //     setRohanResponse('');
+  //     setYouResponse('');
+  //   } catch (error) {
+  //     setError('Error submitting form. Please try again.');
+  //     console.error('Error submitting form:', error);
+  //   }
+  };
+
   return (
     <div className='flex justify-center'>
-    <div className="bg-white p-6  rounded-lg shadow-md w-[95%]">
-      <h2 className="text-xl font-semibold mb-4">Discussion Forum</h2>
-      <textarea className="w-full bg-gray-100 p-2 mb-4 border rounded-md" placeholder="Your Query" rows="7"></textarea>
-      <button className="px-4 py-2 bg-[#17212E] text-white rounded-md mb-4">Submit</button>
-      
-      <h1 className='text-2xl font-semibold flex justify-center'>Commands</h1>
-            
-      <div className="space-y-4">
-        <div className="flex items-start">
-          <div className="bg-[#17212E] text-white w-10 h-10 rounded-full flex items-center justify-center mr-4">
-            R
+      <div className="bg-white p-6 rounded-lg shadow-md w-[95%]">
+        <h2 className="text-xl font-semibold mb-4">Discussion Forum</h2>
+        <textarea
+          className="w-full bg-gray-100 p-2 mb-4 border rounded-md"
+          placeholder="Your Query"
+          rows="7"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+        ></textarea>
+        <button
+          className="px-4 py-2 bg-[#17212E] text-white rounded-md mb-4"
+          onClick={handleSubmit}
+        >
+          Submit
+        </button>
+
+        <h1 className='text-2xl font-semibold flex justify-center'>Commands</h1>
+
+        <div className="space-y-4">
+          <div className="flex items-start">
+            <div className="bg-[#17212E] text-white w-10 h-10 rounded-full flex items-center justify-center mr-4">
+              R
+            </div>
+            <div className="flex-1">
+              <p className="font-semibold">rohan123</p>
+              <input
+                className="bg-gray-100 w-[80%] p-2 border rounded-md"
+                type='text'
+                value={rohanResponse}
+                onChange={(e) => setRohanResponse(e.target.value)}
+              />
+            </div>
           </div>
-          
-          <div className="flex-1">
-            <p className="font-semibold">rohan123</p>
-            <input  className="bg-gray-100 w-[80%] p-2 border rounded-md" type='text'/>
+          <div className="flex items-start">
+            <div className="bg-[#17212E] text-white w-10 h-10 rounded-full flex items-center justify-center mr-4">
+              Y
+            </div>
+            <div className="flex-1 mb-2">
+              <p className="font-semibold">You</p>
+              <input
+                className="bg-gray-100 w-[80%] p-2 border rounded-md"
+                type='text'
+                value={youResponse}
+                onChange={(e) => setYouResponse(e.target.value)}
+              />
+            </div>
           </div>
         </div>
-        <div className="flex items-start">
-          <div className="bg-[#17212E] text-white w-10 h-10 rounded-full flex items-center justify-center mr-4">
-            Y
-          </div>
-          <div className="flex-1 mb-2">
-            <p className="font-semibold">You</p>
-            <input className="bg-gray-100 w-[80%] p-2 border rounded-md " type='text' />
-          </div>
-        </div>
+
       </div>
-    </div>
     </div>
   );
 };
+
+
 
 const Introduction = () => {
 
